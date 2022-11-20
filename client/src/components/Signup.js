@@ -15,7 +15,7 @@ function Signup() {
   const [bio,setBio]=useState(" ");
   const navigate=useNavigate();
   const createUser=()=>{
-    Axios.put(`http://localhost:9000/updateUser/${localStorage.getItem("token")}`,{
+    Axios.put(`http://50.17.117.140:9000/updateUser/${localStorage.getItem("token")}`,{
       name,
       bio,
       username,
