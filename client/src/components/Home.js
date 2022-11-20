@@ -15,7 +15,7 @@ function Home() {
     const [username,setUsername]=useState("");
     const navigate=useNavigate();
     useEffect(()=>{
-        Axios.get(`http://localhost:9000/testUser/${localStorage.getItem("token")}`).then((response)=>{
+        Axios.get(`http://50.17.117.140:9000/testUser/${localStorage.getItem("token")}`).then((response)=>{
             console.log(response.data.name);
             setRecord(response.data);
             setName(response.data.name);
@@ -27,7 +27,7 @@ function Home() {
      //console.log(localStorage.getItem("token"));
     },[]);
     const updateUser=()=>{
-        Axios.put(`http://localhost:9000/updateUser/${localStorage.getItem("token")}`,{
+        Axios.put(`http://50.17.117.140:9000/updateUser/${localStorage.getItem("token")}`,{
             name,
             bio,
             username,
