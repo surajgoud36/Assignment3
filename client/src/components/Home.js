@@ -15,7 +15,7 @@ function Home() {
     const [username,setUsername]=useState("");
     const navigate=useNavigate();
     useEffect(()=>{
-        Axios.get(`http://50.17.117.140:9000/testUser/${localStorage.getItem("token")}`).then((response)=>{
+        Axios.get(`http://3.89.93.76 :9000/testUser/${localStorage.getItem("token")}`).then((response)=>{
             console.log(response.data.name);
             setRecord(response.data);
             setName(response.data.name);
